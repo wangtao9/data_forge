@@ -1,0 +1,12 @@
+output/*
+!output/.gitkeep
+!output/charts/
+output/charts/*
+!output/charts/.gitkeep
+__pycache__/
+*.pyc
+.env
+*.egg-info/
+dist/
+build/
+.pytest_cache/

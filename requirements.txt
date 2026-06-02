@@ -1,0 +1,10 @@
+openai>=1.0
+rouge-score
+sentence-transformers
+umap-learn
+scikit-learn
+matplotlib
+pyyaml
+tqdm
+numpy
+pytest
