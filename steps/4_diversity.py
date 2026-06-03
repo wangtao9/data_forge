@@ -111,7 +111,7 @@ def plot_length_distribution(lengths_dict: dict, output_path: Path):
     for name, lengths in lengths_dict.items():
         ax.hist(lengths, bins=30, alpha=0.5, label=name, color=colors.get(name, "gray"), edgecolor="black")
 
-    ax.set_xlabel("指令长度（词数）")
+    ax.set_xlabel("指令长度（字符数）")
     ax.set_ylabel("频次")
     ax.set_title("指令长度分布对比")
     ax.legend()

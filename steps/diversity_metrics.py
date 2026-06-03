@@ -5,11 +5,14 @@ from statistics import mean, median, stdev
 
 
 def _get_ngrams(text: str, n: int) -> list[str]:
-    """Extract n-grams from text (word-level)."""
-    words = text.split()
-    if len(words) < n:
+    """Extract character-level n-grams from text.
+
+    Uses characters instead of words because Chinese text has no word boundaries.
+    For mixed Chinese/English text, character-level n-grams work uniformly.
+    """
+    if len(text) < n:
         return []
-    return [" ".join(words[i : i + n]) for i in range(len(words) - n + 1)]
+    return [text[i : i + n] for i in range(len(text) - n + 1)]
 
 
 def ngram_dedup_rate(texts: list[str], n: int = 2) -> float:
@@ -32,10 +35,13 @@ def ngram_dedup_rate(texts: list[str], n: int = 2) -> float:
 
 
 def length_stats(texts: list[str]) -> dict:
-    """Compute word-count statistics for a list of texts."""
+    """Compute character-count statistics for a list of texts.
+
+    Uses character count instead of word count for Chinese text consistency.
+    """
     if not texts:
         return {"count": 0, "mean": 0, "median": 0, "min": 0, "max": 0, "std": 0}
-    lengths = [len(text.split()) for text in texts]
+    lengths = [len(text) for text in texts]
     return {
         "count": len(lengths),
         "mean": round(mean(lengths), 2),
