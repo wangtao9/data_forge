@@ -43,6 +43,8 @@ python steps/3_filter.py --input output/scored.jsonl
 
 # Step 4: 多样性分析
 python steps/4_diversity.py --seeds seeds/default_seeds.jsonl
+# Install & enable Chinese fonts if needed:
+# sudo apt install fonts-wqy-microhei && rm -rf ~/.cache/matplotlib
 ```
 
 ## 配置

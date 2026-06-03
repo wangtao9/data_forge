@@ -10,6 +10,20 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+
+def _setup_cjk_font():
+    """Pick the first available CJK font for chart labels."""
+    available = {f.name for f in fm.fontManager.ttflist}
+    for name in ["Noto Sans CJK SC", "WenQuanYi Micro Hei", "WenQuanYi Zen Hei",
+                  "SimHei", "PingFang SC", "Heiti TC", "STHeiti",
+                  "Arial Unicode MS", "Songti SC"]:
+        if name in available:
+            plt.rcParams["font.sans-serif"] = [name] + plt.rcParams.get("font.sans-serif", [])
+            break
+    plt.rcParams["axes.unicode_minus"] = False
+
+_setup_cjk_font()
 import numpy as np
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
