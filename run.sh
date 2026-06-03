@@ -26,6 +26,8 @@ python steps/3_filter.py --config "$CONFIG" --input output/scored.jsonl --output
 echo ""
 
 echo "[Step 4/4] Diversity Analysis: comparing seed vs synthetic vs filtered..."
+# download embedding model from hf mirror
+export HF_ENDPOINT=https://hf-mirror.com
 python steps/4_diversity.py --config "$CONFIG" --seeds "$SEEDS" --synthetic output/synthetic.jsonl --filtered output/filtered.jsonl --output-dir output
 echo ""
 

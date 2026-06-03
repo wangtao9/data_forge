@@ -24,7 +24,7 @@ filter:
   keep_ratio: 0.6
 
 diversity:
-  embedding_model: "paraphrase-multilingual-MiniLM-L12-v2"
+  embedding_model: "BAAI/bge-small-zh-v1.5"
   n_clusters: 10
   umap_neighbors: 15
   umap_min_dist: 0.1
