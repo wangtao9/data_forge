@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ### 配置 API Key
 
 ```bash
-export DASHSCOPE_API_KEY="your-api-key-here"
+export ZHIPUAI_API_KEY="your-api-key-here"
 ```
 
 ### 运行全流程

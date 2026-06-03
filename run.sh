@@ -5,8 +5,8 @@ echo "=== Synthetic Data Pipeline ==="
 echo ""
 
 # Check API key
-if [ -z "${DASHSCOPE_API_KEY:-}" ]; then
-    echo "Error: DASHSCOPE_API_KEY environment variable is not set"
+if [ -z "${ZHIPUAI_API_KEY:-}" ]; then
+    echo "Error: ZHIPUAI_API_KEY environment variable is not set"
     exit 1
 fi
 
