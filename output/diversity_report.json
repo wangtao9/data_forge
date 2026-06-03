@@ -1,0 +1,56 @@
+{
+  "ngram_dedup": {
+    "种子数据": {
+      "bigram": 0.0274,
+      "trigram": 0.0172
+    },
+    "合成数据": {
+      "bigram": 0.0,
+      "trigram": 0.0
+    },
+    "过滤后数据": {
+      "bigram": 0.0,
+      "trigram": 0.0
+    }
+  },
+  "length_stats": {
+    "种子数据": {
+      "count": 175,
+      "mean": 3.79,
+      "median": 1,
+      "min": 1,
+      "max": 40,
+      "std": 5.81
+    },
+    "合成数据": {
+      "count": 300,
+      "mean": 1.24,
+      "median": 1.0,
+      "min": 1,
+      "max": 21,
+      "std": 1.54
+    },
+    "过滤后数据": {
+      "count": 180,
+      "mean": 1.25,
+      "median": 1.0,
+      "min": 1,
+      "max": 21,
+      "std": 1.68
+    }
+  },
+  "clustering": {
+    "种子数据": {
+      "n_clusters": 10,
+      "silhouette_score": 0.0274
+    },
+    "合成数据": {
+      "n_clusters": 10,
+      "silhouette_score": 0.0545
+    },
+    "过滤后数据": {
+      "n_clusters": 10,
+      "silhouette_score": 0.0574
+    }
+  }
+}
